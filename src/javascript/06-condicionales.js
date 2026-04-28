@@ -27,3 +27,23 @@ if(edad >= limiteEdad){
 }
 
 console.log("---------------------------");
+
+//creamos otrom if, usando el "Y" (&&)
+if(edad >= limiteEdad &&(edad <= (limiteEdad + 82))){
+    console.log("mayor de edad y menor de 100");
+    //agregamos el operador && (Y) y el distinto !=
+}else if(edad <= limiteEdad && edad != 2){
+    console.log("Esta persona es menor de edad y no tiene dos años");
+}else{
+    console.log("es un puberto");
+}
+
+
+console.log("---------------------------");
+
+//if con condicional "ó"
+if( (edad == 1) || (edad < limiteEdad) ){
+    console.log("No puede comprar alcohol");
+}else{
+    console.log("Si puede comprar alcohol");
+}
