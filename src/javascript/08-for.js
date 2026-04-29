@@ -24,7 +24,6 @@ for (var i = 2; i <= numero; i += 2) {
 
 console.log("---------------------------")
 console.log("---------------------------")
-console.log("---------------------------")
 
 //Identificamos los numeros par e impar
 for(var i = 1; i <= numero; i++) {
@@ -41,7 +40,48 @@ console.log("---------------------------")
 //definimos una Array de string, en este caso de frutas
 var frutas = ["Manzana","pera","uva","naranja"];
 
-//recorremos el array, recordar que las listas empiuezan del: 0, 1
+//recorremos el array, recordar que las listas empiuezan del: 0, 1, 2...
 for (var i = 0; i < frutas.length; i++){
     console.log("fruta: ", frutas[i]);
 }
+
+console.log("---------------------------")
+
+//forEach
+frutas.forEach(function (fruta){
+    console.log("Fruta con ForEach: ", fruta);
+}
+);
+
+console.log("---------------------------")
+
+var ucm = ["Iron","Hulk","Thor","Gru"];
+//version optimizada para listas mas pequeñas
+for (var i of ucm) {
+    console.log("Personajes: ", i);
+}
+
+console.log("---------------------------")
+
+//recorrer la funcion con MAP, y agregar cambios
+var ucmMayusculas = ucm.map(function (ucm){
+    return ucm.toUpperCase();
+});
+console.log(ucmMayusculas);
+
+console.log("---------------------------")
+
+var ucmMinusculas = ucm.map(function (ucm){
+    return ucm.toLowerCase();
+});
+console.log(ucmMinusculas);
+
+console.log("---------------------------")
+
+//definir el Array
+var bandas = ["Adema","AC/DC","Angra","As lie day"];
+//filtrar bandas que tengan 5 caracteres
+var bandasCortas = bandas.filter(function (filtro){
+    return filtro.length <= 5;
+});
+console.log(bandasCortas);
